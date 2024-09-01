@@ -1,0 +1,78 @@
+body {
+    font-family: 'Lora', serif;
+    background-color: #f0f0f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    padding: 60px; /* Doble del tamaño actual */
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 40px; /* Espacio superior mayor */
+}
+
+h1 {
+    font-size: 24px; /* Tamaño mayor para destacar el título */
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 18px;
+    color: #555;
+    font-weight: 700;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 14px 20px; /* Más espacio para un diseño más limpio */
+    margin: 12px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007aff; /* Color estilo Apple */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #005bb5; /* Color más oscuro para el hover */
+}
+
+#resultados {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.optional-section {
+    display: none;
+    margin-top: 15px;
+}
+
+.optional-section.active {
+    display: block;
+}
+
+button svg {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+

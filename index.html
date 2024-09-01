@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Menú Nutricional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Generador de Menú Nutricional</h1>
+
+        <!-- Sección de Inicio de Sesión -->
+        <h2>Iniciar Sesión</h2>
+        <input type="email" id="email" placeholder="Correo electrónico" required>
+        <input type="password" id="password" placeholder="Contraseña (Número de Licencia)" required>
+        <button type="button" id="login-btn">Iniciar Sesión</button>
+
+        <!-- Formulario para Datos Nutricionales -->
+        <form id="form-nutricional" style="display: none;">
+            <label for="nombre-paciente">Nombre del Paciente:</label>
+            <input type="text" id="nombre-paciente" name="nombre-paciente" required placeholder="Ej. Juan Pérez">
+
+            <label for="peso">Peso (kg):</label>
+            <input type="number" id="peso" name="peso" required placeholder="Ej. 70">
+
+            <label for="altura">Altura (cm):</label>
+            <input type="number" id="altura" name="altura" required placeholder="Ej. 170">
+
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" required placeholder="Ej. 30">
+
+            <label for="genero">Género:</label>
+            <select id="genero" name="genero" required>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+            </select>
+
+            <label for="actividad">Nivel de Actividad Física:</label>
+            <select id="actividad" name="actividad" required>
+                <option value="1.2">Sedentario</option>
+                <option value="1.375">Ligera actividad</option>
+                <option value="1.55">Actividad moderada</option>
+                <option value="1.725">Actividad intensa</option>
+                <option value="1.9">Muy intensa</option>
+            </select>
+
+            <label for="objetivo">Objetivo:</label>
+            <select id="objetivo" name="objetivo" required>
+                <option value="mantener_peso">Mantener peso</option>
+                <option value="perder_peso">Perder peso</option>
+                <option value="ganar_musculo">Ganar músculo</option>
+            </select>
+
+            <!-- Porcentajes de Macronutrientes -->
+            <label for="carbohidratos">% Carbohidratos:</label>
+            <input type="number" id="carbohidratos" name="carbohidratos" value="55" required>
+
+            <label for="proteinas">% Proteínas:</label>
+            <input type="number" id="proteinas" name="proteinas" value="25" required>
+
+            <label for="grasas">% Grasas:</label>
+            <input type="number" id="grasas" name="grasas" value="20" required>
+
+            <!-- Pliegues Cutáneos -->
+            <label>
+                <input type="checkbox" id="toggle-pliegues"> Incluir Pliegues Cutáneos
+            </label>
+            <div id="pliegues-section" class="optional-section">
+                <label for="triceps">Tríceps (mm):</label>
+                <input type="number" id="triceps" name="triceps">
+                <label for="suprailiaco">Suprailiaco (mm):</label>
+                <input type="number" id="suprailiaco" name="suprailiaco">
+                <label for="subescapular">Subescapular (mm):</label>
+                <input type="number" id="subescapular" name="subescapular">
+                <label for="biceps">Bíceps (mm):</label>
+                <input type="number" id="biceps" name="biceps">
+            </div>
+
+            <button type="button" id="btn-calcular">Calcular</button>
+        </form>
+
+        <!-- Botón para Generar Menú Aleatorio -->
+        <button type="button" id="generar-menu-btn" style="display: none;">Generar Menú Aleatorio</button>
+        <div id="menu-resultados"></div>
+
+        <!-- Botones adicionales -->
+        <div id="resultados"></div>
+        <button type="button" id="btn-nuevo-calculo" style="display: none;">Nuevo Cálculo</button>
+        <button type="button" id="exportar-pdf-btn" style="display: none;">Exportar PDF</button>
+    </div>
+    <script src="libs/jspdf.umd.min.js"></script>
+    <script src="libs/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
